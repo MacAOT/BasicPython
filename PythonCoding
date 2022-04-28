@@ -1,3 +1,4 @@
+# Count len of Character in Word
 def count(s):
     counts = {}
     for i in s:
@@ -11,7 +12,7 @@ def count(s):
 word = input("Enter your string: ")
 print(word)
 count(word)
-
+# =====================================================
 romtext = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
 def romtodec(romnum):
     sum = 0
@@ -26,3 +27,62 @@ def romtodec(romnum):
     return sum
 roman = input('Enter Roman Number: ')
 print(f"Roman Number is {roman} = {romtodec(roman)}")
+# =====================================================
+# Prints today's date with help of datetime library
+import datetime
+today = datetime.datetime.today()
+print(today)
+print(f"'Today is {today: Day %d Month %B Year %Y H %H M %M S %S}'")
+newline = ord('\n')
+print(f"newline: {newline}")
+name = 'Mac'
+age = 53
+print(f"Hello, My name is {name} and I'm {age} years old.")
+# =====================================================
+def least_common_multiple(a,b):
+    if a > b:
+        greater = a
+    elif a < b:
+        greater = b
+    elif a == b:
+        greater = 1
+    while(True):
+        if ((greater % a == 0) and (greater % b == 0)):
+            lcm = greater
+            break
+        greater += 1
+    return lcm
+a =int(input("Enter 1st number: "))
+print(f"1st number is {a}")
+b =int(input("Enter 2nd number: "))
+print(f"2nd number is {b}")
+print(least_common_multiple(a,b))    
+# =====================================================
+def bmi_calculator(name, height_cm, weight_kg):
+    bmi = weight_kg / ((height_cm/100) ** 2)
+    print (f'height: {height_cm} cm weight: {weight_kg} kg')
+    print (f'bmi: {bmi}')
+    if bmi < 25.00:
+        print(name + ' is underweight\n')
+    else:
+        print(name + ' is overweight\n')
+x = input('print any button to start, Quit to finish ')
+x = x.lower()   
+while True:
+    try:
+        tries = int(input('How many tries; '))
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
+i = 1
+while x != 'quit' and i <= tries :
+    result1 = input(' name ')
+    result2 = float(input('height(cm) '))
+    result3 = int(input('weight(kg) '))
+    i+=1
+    bmi_calculator(result1, result2, result3)
+    if i > tries:
+        break
+    x = input('print any button to start, Quit to finish ')
+    x = x.lower()    
+print(f'Finish {tries} result(s)')
