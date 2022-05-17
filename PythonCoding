@@ -113,3 +113,51 @@ elif diameter <= 6.5:
 print('size5')
 else:
 print('size6')
+# =====================================================
+a = ["bana","app","oran"]
+b = ["na","le","ge"]
+
+print("Question about List")
+print('a = ["bana","app","oran"]')
+print('b = ["na","le","ge"]')
+print()
+
+print("Solution 1")
+c = []
+for x, y in zip(a, b):
+    completed = x + y
+    c.append(completed)
+print(c)
+print("Solution 2A")
+c = []
+for i in range(3):
+    c.append(a[i]+b[i])
+print(c)
+print("Solution 2B Reverse")
+d = []
+for x in c:
+    d.append(x[:-2])
+print(d)
+e = []
+for x in c:
+    e.append(x[-2:])
+print(e)
+f = []
+for i in range(len(d)):
+    f.append(d[i]+e[i])
+print(f)
+print("Solution 3")
+print([a[i]+b[i] for i in range(len(a))])
+
+print("Solution 4")
+print(list(map(lambda x: "".join(x), zip(a,b))))
+
+print("Solution 5")
+ab = list((a[0] + b[0], a[1] + b[1], a[2] + b[2]))
+print(ab)
+print("Solution 6")
+output = [str(a[0]) + str(b[0]), str(a[1]) + str(b[1]), str(a[2]) + str(b[2])]
+print(output)
+# =====================================================
+
+
