@@ -180,6 +180,7 @@ print()
 [print("*"*(i+1)) for i in range(6)]
 [print("*"*(i-1)) for i in range(7,1,-1)]
 #### Mac Coding ####
+
 # Program to print full pyramid 
 num_rows = int(input("Enter the number of rows"));
 for i in range(0, num_rows):
@@ -188,6 +189,9 @@ for i in range(0, num_rows):
     for j in  range(0, i+1):
         print("*", end=" ")
     print()
+#### Mac Coding ####
+[print(" "*(num_rows-i-1)+"* "*(i+1)) for i in range(0, num_rows)]
+#### Mac Coding ####
 
 #Program to print Left Half Pyramid
 num_rows = int(input("Enter the number of rows"));
@@ -201,14 +205,18 @@ for i in range(0, num_rows):
 
 #Program to print Right Half Pyramid
 num_rows = int(input("Enter the number of rows"));
-k = num_rows*2
 for i in range(0, num_rows):
-    for j in range(0, k):
+    for j in range(0, num_rows*2-2):
         print(end=" ")
-    k = k - 2
+    num_rows -= 1
     for j in range(0, i+1):
         print("* ", end="")
-    print()
+    print()   
+#### Mac Coding ####
+num_rows = int(input("Enter the number of rows"));
+[print(" "*(num_rows*2)+"* "*(i)) for i in range(1, num_rows + 1)]
+[print("* "*(i)) for i in range(num_rows, 0, -1)]
+#### Mac Coding ####
 
 # Program to print One More Star Pattern Pyramid
 print("Program to print star pattern: \n");
@@ -221,6 +229,11 @@ for i in range (num_rows, 0, -1):
     for j in range(0, i -1):
         print("* ", end='')
     print("\r")
+#### Mac Coding ####
+num_rows = int(input("Enter the number of rows"));
+[print("* "*(i)) for i in range(1, num_rows + 1)]
+[print("* "*(i)) for i in range(num_rows - 1, 0, -1)]
+#### Mac Coding ####
     
 print("Program to print star pattern in different style: \n");
 num_rows = int(input('Please enter the number of rows'));
