@@ -291,4 +291,24 @@ for i in range(1, num_rows):
         k += 1
     print()
 #### Mac Coding ####
+
+# Program to print full pyramid and the star is odd every row
+n = 5
+for i in range(n):
+    print(' ' * (n-i-1), end='')
+    print('*' * (2*i+1), end='')
+    print()
+#### Mac Coding ####   
+row = 5
+for i in range(row):
+    for j in range(row-i-1):
+        print(end=" ")
+    for j in range(2*i+1):
+        print("*", end="")      
+    print()
+# Shorter version #
+[print(" "*(row-i-1)+"*"*(i+(i+1))) for i in range(0, row)]
+#### Mac Coding ####
+
+
 # =====================================================    
