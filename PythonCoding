@@ -310,5 +310,28 @@ for i in range(row):
 [print(" "*(row-i-1)+"*"*(i+(i+1))) for i in range(0, row)]
 #### Mac Coding ####
 
+""" Generates a Pattern depending on the user Input """
+# user can input the Width of the Square
+width = int(input("Width: "))
+# user can input the Height of the Square
+height = int(input("Height: "))
+# this generates the first row of Stars
+output = ("x " * width) + "\n"
+# here we add each row with the ! Signs
+for i in range(height-2):
+    output += "x " + ("  " * (width - 2)) + "x\n"
+# we end the Output with another line of Stars
+output += "x " * width
+# print the Output to the Console
+print(output)
+
+n = int(input("Number of Square: "))
+for row in range(n):
+    for column in range(n):
+        if row == n-1 or column == n-1 or row == 0 or column == 0 or row == n/2-.5 or column == n/2-.5:
+            print("x", end=" ")
+        else:
+            print(" ", end=" ")
+    print(" ")
 
 # =====================================================    
