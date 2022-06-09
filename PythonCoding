@@ -325,10 +325,11 @@ output += "x " * width
 # print the Output to the Console
 print(output)
 
-n = int(input("Number of Square: "))
+n = int(input("Size of Square: "))
 for row in range(n):
     for column in range(n):
         if row == n-1 or column == n-1 or row == 0 or column == 0 or row == n/2-.5 or column == n/2-.5:
+        #if row%2 == 0 or column%2 == 0:
             print("x", end=" ")
         else:
             print(" ", end=" ")
