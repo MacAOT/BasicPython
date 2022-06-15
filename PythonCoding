@@ -336,3 +336,42 @@ for row in range(n):
     print(" ")
 
 # =====================================================    
+# KeyWord
+import sys
+import keyword
+KWList = keyword.kwlist
+#KWList.sort(reverse=True)
+print(KWList)
+for i in range(len(KWList)):
+	print(KWList[i])
+# Class.Method  
+print(type(1),len(dir(1)))
+for i in range(len(dir(1))):
+	print(dir(1)[i],i+1)
+print(type(1.0),len(dir(1.0)))
+for i in range(len(dir(1.0))):
+	print(dir(1.0)[i],i+1)
+print(type('a'),len(dir('a')))
+for i in range(len(dir('a'))):
+	print(dir('a')[i],i+1)
+b = []
+print(type(b),len(dir(b)))
+for i in range(len(dir(b))):
+	print(dir(b)[i],i+1)
+c = {}
+print(type(c),len(dir(c)))
+for i in range(len(dir(c))):
+	print(dir(c)[i],i+1)
+d = True
+print(type(d),len(dir(d)))
+for i in range(len(dir(d))):
+	print(dir(d)[i],i+1)
+# Reverse the sentence
+a = 'Suttipun Pornworawish'
+for i in range(0, len(a)):
+	print(a[i],end="-")
+print()
+for i in range(0, len(a)):
+	j = i + 1
+	print(a[-j],end="-")
+# =====================================================    
