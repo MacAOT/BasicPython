@@ -387,3 +387,16 @@ except Exception as err:
 	print(err)
 	print(type(err))
 # =====================================================  
+# Greater Number by List
+n1 = 678
+n2 = 234
+print("n1 =",n1,", n2 =",n2,", n2>n1 =",n2>n1)
+print("Greater number is",[n1,n2][(n2>n1)])
+def greater(n1,n2):
+    print("n1 =",n1,", n2 =",n2,", n2>n1 =",n2>n1)
+    return([n1,n2][(n2>n1)])
+print()
+print("Greater number is",greater(int(input("n1 = ")),int(input("n2 = "))))
+# =====================================================  
+
+
