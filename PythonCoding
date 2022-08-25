@@ -432,5 +432,12 @@ func(int(input("enter")))
 # ---------------------------------------
 print(*[i*str(i) for i in range(1,int(input("enter"))+1)],sep = '\n')
 # =====================================================  
-
-
+# Print Calendar by input YEAR
+from calendar import*
+year = int(input('Enter Year:'))
+print(calendar(year,2,1, 4, 4))
+#2 = 2 characters for days (Mo,Tu, etc)
+#1 = 1 Line (row) for each week
+#8 = 8 rows for each month
+#4 = 4 columns for all months of the year.
+# =====================================================  
