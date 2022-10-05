@@ -441,3 +441,21 @@ print(calendar(year,2,1, 4, 4))
 #8 = 8 rows for each month
 #4 = 4 columns for all months of the year.
 # =====================================================  
+# The multiplication table
+def tab(x,z):
+    y=1
+    print('*************************************')
+    print("The multiplication table of ",x," is :")
+    while(y<z):
+        print(x,'x',y,'=',x*y,sep=' ')
+        y += 1
+        if(y==z):
+            print('*************************************\n')
+a = 1
+b = 13
+c = 12
+while(a<=c):
+    tab(a,b)
+    a += 1
+ # =====================================================  
+ 
