@@ -1,0 +1,147 @@
+def Calendars(month,nb,last):
+    n = int((52 - len(month))/2)
+    [print("-",end="") for i in range(n)] 
+    print(month,end="")
+    [print("-",end="") for i in range(n)]
+    print()
+    days =["SUN","MON","TUE","WED","THU","FRI","SAT"]
+    for d in days:
+        print(d,end="\t\t")
+    print()    
+    for i in range(nb):
+        print("",end="\t\t")
+    for j in range(1,last+1):
+        print(j,end="\t\t")
+        if j in [7-nb,14-nb,21-nb,28-nb,35-nb]:
+            print()
+    if month != "SEPTEMBER":
+        print()
+
+Calendars("JANUARY",0,31)
+Calendars("FEBRUARY",3,28)
+Calendars("MARCH",3,31)
+Calendars("APRIL",6,30)
+Calendars("MAY",1,31)
+Calendars("JUNE",4,30)
+Calendars("JULY",6,31)
+Calendars("AUGUST",2,31)
+Calendars("SEPTEMBER",5,30)
+Calendars("OCTOBER",0,31)
+Calendars("NOVEMBER",3,30)
+Calendars("DECEMBER",5,31)
+==============================================================================
+def Heading():
+    print("SUN",end="\t\t")
+    print("MON",end="\t\t")
+    print("TUE",end="\t\t")
+    print("WED",end="\t\t")
+    print("THU",end="\t\t")
+    print("FRI",end="\t\t")
+    print("SAT",end="")
+    print("")
+    
+print("---------------     JANUARY     ---------------")
+Heading()
+for january in range(1,32):
+    print(january,end="\t\t")
+    if january % 7 == 0:
+        print("")
+print("\n")
+print("---------------     FEBRUARY     ---------------")
+Heading()
+for i in range(3):
+    print(" ",end="\t\t")
+for february in range(1,29):
+    print(february,end="\t\t")
+    if february in [4,11,18,25]:
+        print("")
+print("\n")
+print("---------------     MARCH     ---------------")
+Heading()
+for i in range(3):
+    print(" ",end="\t\t")    
+for march in range(1,32):
+    print(march,end="\t\t")
+    if march in [4,11,18,25]:
+        print("")
+print("\n")
+print("---------------     APRIL     ---------------")
+Heading()
+for i in range(6):
+    print(" ",end="\t\t")
+for april in range(1,31):
+    print(april,end="\t\t")
+    if april in [1,8,15,22,29]:
+        print("")
+print("\n")
+print("---------------     MAY     ---------------")
+Heading()
+print(" ",end="\t\t")
+for may in range(1,32):
+       print(may,end="\t\t")
+       if may in [6,13,20,27]:
+           print("")
+print("\n")
+print("---------------     JUNE     ---------------")
+Heading()
+for i in range(4):
+    print(" ",end="\t\t")
+for june in range(1,31):
+    print(june,end="\t\t")
+    if june in [3,10,17,24]:
+        print("")
+print("\n")
+print("---------------     JULY     ---------------")
+Heading()
+for i in range(6):
+    print(" ",end="\t\t")
+for july in range(1,32):
+    print(july,end="\t\t")
+    if july in [1,8,15,22,29]:
+        print("")
+print("\n")
+print("---------------     AUGUST     ---------------")
+Heading()
+for i in range(2):
+    print(" ",end="\t\t")
+for august in range(1,32):
+    print(august,end="\t\t")
+    if august in [5,12,19,26]:
+        print("")
+print("\n")
+print("---------------     SEPTEMBER     ---------------")
+Heading()
+for i in range(5):
+    print(" ",end="\t\t")
+for september in range(1,31):
+    print(september,end="\t\t")
+    if september in [2,9,16,23,30]:
+        print("")
+print("\n")
+print("---------------     OCTOBER     ---------------")
+Heading()
+for october in range(1,32):
+    print(october,end="\t\t")
+    if october % 7 == 0:
+        print("")
+print("\n")
+print("---------------     NOVEMBER     ---------------")
+Heading()
+for i in range(3):
+    print(" ",end="\t\t")
+for november in range(1,31):
+    print(november,end="\t\t")
+    if november in [4,11,18,25]:
+        print("")
+print("\n")
+print("---------------     DECEMBER     ---------------")
+Heading()
+for i in range(5):
+    print(" ",end="\t\t")
+for december in range(1,32):
+    print(december,end="\t\t")
+    if december in [2,9,16,23,30]:
+        print("")
+print("\n")
+================================================
+
