@@ -11,6 +11,35 @@ def Calendars(month,nb,last):
     for i in range(nb):
         print("",end="\t\t")
     for j in range(1,last+1):
+        print(f" {j:02d}",end="\t\t")
+        #if (nb == 7-(j%7))+(nb == j%7)*((month == "JANUARY")+(month == "OCTOBER")):        
+        if j in [7-nb,14-nb,21-nb,28-nb,35-nb]:
+            print()
+    if month != "SEPTEMBER":
+        print()
+    [print("-",end="") for i in range(51)]
+    print("\n")
+
+x = ["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE",\
+     "JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
+y = [0,3,3,6,1,4,6,2,5,0,3,5]
+z = [31,28,31,30,31,30,31,31,30,31,30,31]
+for i in range(len(x)):
+    Calendars(x[i], y[i], z[i])
+==============================================================================
+def Calendars(month,nb,last):
+    n = int((52 - len(month))/2)
+    [print("-",end="") for i in range(n)] 
+    print(month,end="")
+    [print("-",end="") for i in range(n)]
+    print()
+    days =["SUN","MON","TUE","WED","THU","FRI","SAT"]
+    for d in days:
+        print(d,end="\t\t")
+    print()    
+    for i in range(nb):
+        print("",end="\t\t")
+    for j in range(1,last+1):
         print(j,end="\t\t")
         if j in [7-nb,14-nb,21-nb,28-nb,35-nb]:
             print()
