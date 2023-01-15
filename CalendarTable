@@ -1,3 +1,12 @@
+from datetime import datetime,timedelta
+from dateutil.relativedelta import relativedelta
+today = datetime.now()+ timedelta(days=410)
+tmw = today + timedelta(days = 1)
+next2d = today + relativedelta(days = 2)
+next12m = today + relativedelta(months = 12)
+next4y = today + relativedelta(years = 4)
+print(f'{today}\n{tmw}\n{next2d}\n{next12m}\n{next4y}')
+==============================================================================
 def Calendars(month,nb,last):
     n = int((52 - len(month))/2)
     [print("-",end="") for i in range(n)] 
